@@ -1,0 +1,117 @@
+/* space-sea-animations*/
+.seabody{
+    position: absolute;
+    border: 3px solid black;
+}
+.sea{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05),rgba(255, 255, 255, 0.2)) , url(img/space_background.jpg);
+    /* width: 960px;
+    height: 540px; */
+    /* width: 1920px;
+    height: 1080px; */
+    width: 98dvw;
+    height: 97dvh;
+    min-width: 480px;
+    min-height: 270px;
+    max-width: 1920px;
+    max-height: 1080px;
+
+    overflow: hidden;
+    position: relative;
+}
+/* .sea > img{
+    display: none;
+} */
+@keyframes spaceship{
+    0%{
+        transform: rotate(35deg);
+    }
+    25%{
+        transform: rotate(33deg);
+    }
+    50%{
+        transform: rotate(35deg);
+    }
+    75%{
+        transform: rotate(37deg);
+    }
+    100%{
+        
+        transform: rotate(35deg);
+    }
+}
+#spaceship{
+    display: block;
+    position: absolute; 
+    left: 20%; 
+    top: 10%; 
+    width: 40%;
+    transform: rotate(35deg);
+    animation: spaceship 5s infinite linear;
+}
+#back{
+    display: block;
+    position: absolute; 
+    left: 5%; 
+    width: 90%; 
+    opacity: 0.3;
+    top: -20%;
+}
+@keyframes comet{
+    from{
+        transform: translateX(-500px) translateY(-500px) rotate(90deg);
+    }
+    to{
+        transform: translateX(0) translateY(0) rotate(90deg);
+    }
+}
+#comet{
+    display: block;
+    position: absolute; 
+    bottom: -200px;
+    left: 400px;
+    width: 5dvw;
+    transform: rotate(90deg);
+    animation: comet 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.5,.98,.31,1.02)
+}
+@keyframes rock{
+    from{
+        transform: translateX(110dvw) translateY(90dvh) rotate(180deg) scale(2);
+    }
+    to{
+        transform: translateX(0) translateY(0) rotate(0deg) scale(0.01);
+    }
+}
+#rock{
+    display: block;
+    position: absolute;
+    top: -40%;
+    right: 65%;
+    height: 40%;
+    animation: rock 20s linear;
+    animation-iteration-count: infinite;
+}
+#mainmenu_ct{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-family: "Arial";
+    font-weight: 1000;
+    color: white;
+}
+#mainmenu{
+    height: 50px;
+    width: 52px;
+    background-color: purple;
+}
+#mainmenu>a{
+    height: 100%;
+}
+#mainmenu:hover{
+    background-color: white;
+}
+#mainmenu  img{
+    height: 100%;
+}

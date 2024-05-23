@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style_one.css">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <header> 
+            <h1>Ceci est une page web</h1>
+            <cite>
+                "Le sujet du site web est libre." <br>
+                - citation de Dr. Samuel Murail, concernant ce devoir.
+            </cite>
+        </header>
+        <nav>
+            <div class="menu"><img src="img/menu.png" alt=""></div>
+            <ul>
+                <li> <a href="first_page.html"> Main </a></li>
+                <li> <a href="CV_web.html"> CV </a> </li>
+                <li> <a href="Contexte.html"> Contexte </a> </li>
+                <li> <a href="Formulaire.html"> Formulaire </a> </li>
+                <li> <a href="animation_sea.html"> Comet Styled Space </a> </li>
+            </ul>
+        </nav>
+        <div class="page">
+            <div id="animation" class="slide rotate hidden"><img src="img/facebest.png" alt=""></div>
+            <div id="animation2" class="hidden"> SAMUEL MURAIL <div id="citation"></div></div>
+            <div class="main">
+                <form>
+                    <div id="activités">
+                        Laquelle de ces activités avez-vous déjà pratiqué au moins une fois ? : <br>
+                        <div><label for="cheval"> équitation </label>
+                            <input type="checkbox" id="cheval" name="user_act" value="cheval"></div>
+                        <div><label for="voile"> bateau à voile </label>
+                            <input type="checkbox" id="voile" name="user_act" value="voile"></div>
+                        <div><label for="cuisine"> cuisine à cloche-pied </label>
+                            <input type="checkbox" id="cuisine" name="user_act" value="cuisine"></div>
+                        <div><label for="numismatie"> numismatique </label>
+                            <input type="checkbox" id="numismatie" name="user_act" value="numismatie"></div>
+                        <div><label for="saut"> saut en parachute </label>
+                            <input type="checkbox" id="saut" name="user_act" value="saut"></div>
+                        <div><label for="alchimie"> alchimie </label>
+                            <input type="checkbox" id="alchimie" name="user_act" value="alchimie"></div>
+                        <div><label for="tous"> tous en même temps </label>
+                            <input type="checkbox" id="tous" name="user_act" value="tous"></div>
+                    </div>
+                    <div id="domaine">
+                        <label for="job"> Dans quel domaine travaillez-vous ?</label>
+                        <select id="job" name = user_job>
+                            <option value="cuisine" name = user_job> Cuisine </option>
+                            <option value="chercheur" name = user_job> Recherche-enseignement </option>
+                            <option value="alchimie" name = user_job> Alchimie </option>
+                        </select>
+                    </div>
+                    <div id="BI" class="hidden">
+                        <div>Faîtes-vous de la bioinformatique ?</div> 
+                        <div>
+                            <label for="bioui"> Oui :</label>
+                            <input id="bioui" type="radio" value="oui" name="user_BI"> 
+                            <label for="binon"> Non :</label>
+                            <input id="binon" type="radio" value="non" name="user_BI"> 
+                        </div>
+                    </div>
+                    <div id="protein" class="hidden">
+                        <label for="prot"> Quel est votre famille de protéine préférée actuellement ?</label>
+                        <select id="prot" name = user_prot>
+                            <option value="B"> Bêta-galactosidase </option>
+                            <option value="pLGIC"> pLGIC : Pentameric ligand-gated ion channels : Récepteurs-canaux pentamériques </option>
+                            <option value="RCPG"> RCPG : Récepteurs couplés aux protéines G </option>
+                        </select>
+                    </div>
+                    <div id="docking" class="hidden">
+                        <div>Faîtes-vous du docking moléculaire et/ou de la dynamique moléculaire ?</div>
+                        <div>
+                            <label for="dockoui"> Oui :</label>
+                            <input id="dockoui" type="radio" value="oui" name="user_dock"> 
+                            <label for="docknon"> Non :</label>
+                            <input id="docknon" type="radio" value="non" name="user_dock"> 
+                        </div>
+                    </div>
+                    <div id="description" class="hidden">
+                        <label for="descr"> Comment décrireriez-vous la dynamique moléculaire, si vous parliez à un chien ?</label>
+                        <textarea id="descr" name="user_devise">Oui.</textarea>
+                    </div>
+                    <div id="pasteur" class="hidden">
+                        <div>Avez-vous déjà travaillé à l'institut Pasteur ?</div>
+                        <div>
+                            <label for="pastoui"> Oui :</label>
+                            <input id="pastoui" type="radio" value="oui" name="user_past"> 
+                            <label for="pastnon"> Non :</label>
+                            <input id="pastnon" type="radio" value="non" name="user_past"> 
+                        </div>
+                    </div>
+                    <div id="UP" class="hidden">
+                        <div>Êtes-vous actuellement professeur à l'Université Paris Cité ?</div>
+                        <div>
+                            <label for="upoui"> Oui :</label>
+                            <input id="upoui" type="radio" value="oui" name="user_up"> 
+                            <label for="upnon"> Non :</label>
+                            <input id="upnon" type="radio" value="non" name="user_up"> 
+                        </div>
+                    </div>
+                    <div id="murail" class="hidden">
+                        <div>Êtes-vous Samuel Murail ?</div>
+                        <div>
+                            <label for="muroui"> Oui :</label>
+                            <input id="muroui" type="radio" value="oui" name="user_nom"> 
+                            <label for="murnon"> Non :</label>
+                            <input id="murnon" type="radio" value="non" name="user_nom"> 
+                        </div>
+                    </div>
+                    
+                    <div class="submit">
+                        <input type="button" onclick="add_qs();arrive()" value="Valider"> </input>
+                    </div>
+                    <div class="button" onclick="reset()">
+                        <input type="reset"/>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

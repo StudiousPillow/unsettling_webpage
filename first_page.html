@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" href="style_one.css">
+        <script src="index.js"></script>
+    </head>
+    <body onload="leak()">
+        <header> 
+            <h1>Ceci est une page web</h1>
+            <cite>
+                "Le sujet du site web est libre." <br>
+                - citation de Dr. Samuel Murail, concernant ce devoir.
+            </cite>
+        </header>
+        <nav>
+            <div class="menu"><img src="img/menu.png" alt=""></div>
+            <ul>
+                <li> <a href="first_page.html"> Main </a></li>
+                <li> <a href="CV_web.html"> CV </a> </li>
+                <li> <a href="Contexte.html"> Contexte </a> </li>
+                <li> <a href="Formulaire.html"> Formulaire </a> </li>
+                <li> <a href="animation_sea.html"> Comet Styled Space </a> </li>
+            </ul>
+        </nav>
+
+        <div class="main page">
+            <img src="img/head.png" alt="" id="head">
+            <div class="center">
+                <p>
+                    Ceci est une page web. Elle est donc composée de fichiers html, css et de javascript. <br> <br>
+                    
+                    Concentrons-nous sur javascript. C'est de loin le langage de programmation qui peut tourner côté client le plus dominant, avec 99% des sites qui l'utilise. <br>
+                    C'est un langage très polyvalent qui permet beaucoup d'interactivité sans avoir à recharger la page. Par rapport à un échange avec le serveur, cela peut économiser de la bande-passante et être plus rapide. <br>
+                    Javascript est disponible sur tous les navigateurs modernes et c'est son principal atout, avec le fait qu'il soit très polyvalent, orienté-objet, et avec de très nombreuses librairies. <br>
+                </p>
+
+                <h4>Un vieux langage</h4>
+                En 1995, javascript a été créé par Netscape, 
+                deux ans près leur création du premier navigateur, 
+                et en collaboration avec Sun Microsystems (créateurs de Java). 
+                La même année, Microsoft sorti Internet Explorer, 
+                en concurrence avec le navigateur de Netscape, 
+                et avec leur propre interpréteur de javascript. 
+                Après cela, de nombreuses entreprises ont créé leurs propres navigateurs, 
+                en concurrence avec les autres, et avec un interpréteur javascript différent ;
+                par exemple Mozilla ou Chrome. <br>
+                Des tentatives de standardisation par ECMAScript n'ont pas été très fructueuses, jusqu'en 2008-2009, 
+                où tous les créateurs de navigateurs ont travaillé ensemble pour créer le standard ECMAScript 5 puis ECMAScript 6 en 2015. <br>
+                Depuis, ECMAScript ajoute tous les ans des fonctionnalités.
+                Malgré cet important travail de standardisation, 
+                il existe encore quelques incompatibilités entre navigateurs, 
+                qui ne l'implémente pas exactement de la même manière ou ne sont pas tout à fait à jour sur les nouvelles normes ECMAScript. <br>
+                Beaucoup d'options de javascript sont disponible pour les navigateurs de plus de 90% des utilisateurs, 
+                ce qui est beaucoup, mais pas 100%. <br>
+                De plus, puisqu'il est autant utilisé, 
+                il est difficile de populariser un nouveau langage. 
+                Javascript est un langage très vieux, qui a vu de nombreuses additions au cours du temps. 
+                Un certain manque de cohérence qui peut être critiqué 
+                (mais qui peut aussi être critiqué dans d'autres langages, 
+                mais ceux-ci ne sont pas implémentés dans tous les navigateurs). 
+                Il est aussi facile de coder de manière non-optimale, ce qui peut causer des bugs.
+
+                <h4>Alternatives</h4>
+                Pour éviter les bugs, faciliter l'écriture et permettre l'adaptation à tous les navigateurs, 
+                il existe des langages capables de compiler en javascript, 
+                comme TypeScript ou CoffeeScript. Ils permettent une écriture plus efficace et optimisée. <br>
+                Il existe aussi un langage équivalent à Javascript, 
+                de plus bas niveau, Webassembly, qui commence à se développer. 
+
+                <h4>Sécurité</h4>
+                Concernant la sécurité, javascript peut être très dangereux, 
+                puisque c'est un programme externe, 
+                qui peut venir de n'importe quelle source sur internet, 
+                et qui tourne de manière locale. Pour protéger l'utilisateur, 
+                différentes techniques sont mise en oeuvre par les navigateurs, 
+                comme le sandboxing, qui limite le script à sa page web, mais elles ne sont pas toujours suffisantes. 
+                Certaines attaques informatiques sont basées sur des failles en javascript. <br>
+                Le problème le plus commun est l'attaque par "cross site scripting", où un site parvient
+                à faire exécuter un script js sur un autre site, 
+                qui pourrait, par exemple rediriger l'utilisateur vers un site malicieux. <br>
+                
+                <h4>Vie privée</h4>
+                Javascript permet de récupérer de nombreuses informations sur l'utilisateur, 
+                qui, misent ensemble, donne une signature unique à chaque ordinateur.
+                Ceci permet de faire du "fingerprinting", donc d'identifier avec précision
+                chaque ordinateur. Ceci pose un grand risque en terme de vie privée. <br>
+                La seule manière efficace à coup sûr pour éviter d'être traqué est de désactiver javascript.
+                <br><br>
+                Par exemple : <br> <br>
+                <div id="leakedinfo"></div>
+                <br> <br>
+                Ceci est un aperçu du type d'information qui permettent à des algorithmes de traquer les utilisateurs en ligne. 
+                Il existe des sites qui permettent de se rendre compte de notre empreinte unique : <br>
+                <a href="https://coveryourtracks.eff.org/">https://coveryourtracks.eff.org/</a> <br>
+                <a href="https://amiunique.org/fingerprint/">https://amiunique.org/fingerprint</a> <br> <br>
+                
+                Certains problèmes sont directement lié à javascript, mais un grand nombre sont dûs à son histoire, 
+                et au principe même d'avoir un programme de haut niveau exécutable dans un navigateur. 
+
+                <h4>Privilégier CSS à javascript</h4>
+                Pour des raisons de sécurité, mais aussi beaucoup de protection de la vie privée, 
+                certains navigateurs permettent de limiter, voir empêcher l'exécution de javascript.
+                Pour de la mise en page ou des animations simples, 
+                il peut donc être préférable d'utiliser CSS, qui marchera quand même dans ce cas.
+                <br><br>
+                <!-- Voici pour finir un exemple d'utilisation de CSS, que certains sites codent en javascript : des images de personnes plus ou moins souriantes, 
+                en CSS, avec un ajout de javascript pour permettre une utilisation des flèches (ce qui est optionel). -->
+                Voici maintenant le deuxième thème majeur de cette page d'acceuil : des images de personnes plus ou moins souriantes.
+            </div>
+            <div class="right">
+                <div class="pull"></div>
+                <div class="buttonlist">
+                    <input type="button" id="B" onclick="headin()" value="Say Hi">
+                    <button id="C"> <a href="page_useless.html">a button</a> </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="main2">
+            <div class="img-container">
+                <button id = "prev" class="arrow"><img src="img/left-arrow.png" alt=""></button>
+                <div class="images">
+                    <img src="img/face1.webp" alt="">
+                    <img src="img/face3.webp" alt="">
+                    <img src="img/face4.webp" alt="">
+                    <img src="img/face5.webp" alt="">
+                    <img src="img/face6.webp" alt="">
+                    <img src="img/face7.webp" alt="">
+                    <img src="img/face8.avif" alt="">
+                    <img src="img/faceS.png" alt="">
+                    <img src="img/TheOne.jpg" alt="">
+                </div>
+                <button id="next" class="arrow"><img src="img/right-arrow.png" alt=""></button>
+            </div>
+            <div class="footnote">
+                <div class="sources">
+                   
+                <cite> 
+                    Images issues de :
+                    <a href="https://www.gettyimages.fr"> gettyimages.fr </a>
+                    <a href="https://unsplash.com/">unsplash.com</a>
+                    <a href="https://www.linkedin.com/">linkedin.com</a>
+                    <a href="https://tenor.com/">tenor.com</a> <br>
+
+                    <h4>Sources</h4> 
+                    <a href="https://github.com/fingerprintjs/fingerprintjs">fingerprintjs</a>
+                    <a href="https://web.archive.org/web/20150428060530/http://www.01net.com/editorial/627328/de-fausses-annonces-ebay-piegent-les-utilisateurs/">exemple d'attaque en XSS</a>
+                    <a href="https://pixelprivacy.com/resources/browser-fingerprinting/">le fingerprinting</a>
+                    <a href="https://www.vice.com/en/article/9akpwz/rowhammerjs-is-the-most-ingenious-hack-ive-ever-seen">exemple d'attaque basé sur javascript</a>
+                    <a href="https://web.dev/learn/privacy/fingerprinting">le fingerprinting</a>
+                    <a href="https://caniuse.com/mdn-javascript_builtins_array_findlastindex">exemple de resources js avec sa compatibilité</a>
+                    <a href="https://w3techs.com/technologies/details/cp-javascript">le fingerprinting</a>
+                    <a href="https://www.iconfinder.com">icones pour la page entière</a>
+                    
+
+                </cite>
+            </div>
+        </div>
+    </body>
+</html>
